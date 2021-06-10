@@ -1,0 +1,13 @@
+@value makerBlue, makerWhite from '../../common/colors.css';
+
+.footer {
+  background-color: makerBlue;
+  width: 100%;
+  padding: 0.3em;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+}
+
+.title {
+  color: makerWhite;
+}
