@@ -1,0 +1,13 @@
+@value makerBlue, makerWhite, makerBlack from '../../common/colors.css';
+
+.preview {
+  flex-basis: 50%;
+  background-color: thistle;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1em;
+  color: makerBlue;
+}
