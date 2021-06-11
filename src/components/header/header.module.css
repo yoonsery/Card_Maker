@@ -1,12 +1,12 @@
 @value makerBlue, makerWhite, makerBlack from '../../common/colors.css';
 
 .header {
-  background-color: makerBlue;
   position: relative;
   width: 100%;
   padding: 0.5em;
   text-align: center;
   border-radius: 10px 10px 0 0;
+  background-color: makerBlue;
 }
 
 .logo {
