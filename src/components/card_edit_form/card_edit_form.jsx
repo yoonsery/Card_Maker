@@ -8,6 +8,7 @@ const CardEditForm = ({ card }) => {
     card;
 
   const onSubmit = () => {};
+
   return (
     <form className={styles.form}>
       <input className={styles.input} type="text" name="name" value={name} />

@@ -5,9 +5,7 @@ import Footer from '../footer/footer';
 import { useHistory } from 'react-router-dom';
 import Editor from '../editor/editor';
 import Preview from '../preview/preview';
-import Cards from '../cards/cards';
-
-const { user } = new Cards();
+import Card from '../card/card';
 
 const Maker = ({ authService }) => {
   const [cards, setCards] = useState([
@@ -58,11 +56,17 @@ const Maker = ({ authService }) => {
       }
     });
   });
+
+  const addCard = (card) => {
+    const update = [...cards, card];
+    setCards(update);
+  };
+
   return (
     <section className={styles.maker}>
       <Header onLogout={onLogout} />
       <div className={styles.container}>
-        <Editor cards={cards} />
+        <Editor cards={cards} addCard={addCard} />
         <Preview cards={cards} />
       </div>
       <Footer />
