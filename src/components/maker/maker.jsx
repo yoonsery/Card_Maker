@@ -5,8 +5,6 @@ import Footer from '../footer/footer';
 import { useHistory } from 'react-router-dom';
 import Editor from '../editor/editor';
 import Preview from '../preview/preview';
-import Card from '../card/card';
-import CardRepository from '../../service/card_repository';
 
 const Maker = ({ FileInput, authService, cardRepository }) => {
   const history = useHistory();
@@ -22,12 +20,11 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
     if (!userId) {
       return;
     }
-
     const stopSync = cardRepository.syncCards(userId, (cards) => {
       setCards(cards);
     });
     return () => stopSync();
-  }, [userId]);
+  }, [userId, cardRepository]);
 
   useEffect(() => {
     authService.onAuthChange((user) => {
@@ -37,7 +34,7 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
         history.push('/');
       }
     });
-  });
+  }, [authService, history]);
 
   const createOrUpdateCard = (card) => {
     setCards((cards) => {
