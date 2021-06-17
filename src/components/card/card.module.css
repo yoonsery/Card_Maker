@@ -35,7 +35,9 @@
 }
 
 .info {
-  max-width: 100%;
+  width: 100%;
+  margin-right: 1em;
+  overflow-x: auto;
 }
 
 .name,
