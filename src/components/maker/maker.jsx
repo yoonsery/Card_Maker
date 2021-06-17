@@ -1,4 +1,4 @@
-import { React, useEffect, useState } from 'react';
+import { React, useCallback, useEffect, useState } from 'react';
 import styles from './maker.module.css';
 import Header from '../header/header';
 import Footer from '../footer/footer';
@@ -12,9 +12,9 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
   const [cards, setCards] = useState({});
   const [userId, setUserID] = useState(historyState && historyState.id);
 
-  const onLogout = () => {
+  const onLogout = useCallback(() => {
     authService.logout();
-  };
+  }, [authService]);
 
   useEffect(() => {
     if (!userId) {
@@ -36,14 +36,17 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
     });
   }, [authService, history]);
 
-  const createOrUpdateCard = (card) => {
-    setCards((cards) => {
-      const updated = { ...cards };
-      updated[card.id] = card;
-      return updated;
-    });
-    cardRepository.saveCard(userId, card);
-  };
+  const createOrUpdateCard = useCallback(
+    (card) => {
+      setCards((cards) => {
+        const updated = { ...cards };
+        updated[card.id] = card;
+        return updated;
+      });
+      cardRepository.saveCard(userId, card);
+    },
+    [cardRepository, userId]
+  );
 
   const deleteCard = (card) => {
     setCards((cards) => {
