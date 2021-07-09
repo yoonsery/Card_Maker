@@ -6,12 +6,14 @@ import styles from './login.module.css';
 
 const Login = ({ authService }) => {
   const history = useHistory();
+
   const goToMaker = (userId) => {
     history.push({
       pathname: '/maker',
       state: { id: userId },
     });
   };
+
   const onLogin = (e) => {
     authService //
       .login(e.currentTarget.textContent)
