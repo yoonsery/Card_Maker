@@ -36,8 +36,7 @@ const createOrUpdateCard = useCallback(
 );
 ```
 
-배열이 아니므로
-Editor component에서
+배열이 아니므로 Editor component에서
 
 ```js
 {cards.map(card => (
