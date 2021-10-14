@@ -26,6 +26,7 @@
 }
 
 .avatar {
+  flex: 0.9;
   width: 10em;
   height: 10em;
   padding: 1em;
@@ -35,9 +36,9 @@
 }
 
 .info {
+  flex: 2;
   width: 100%;
   margin-right: 1em;
-  overflow-x: auto;
 }
 
 .name,
@@ -61,7 +62,7 @@
 .company::after {
   content: '';
   display: block;
-  width: 90%;
+  width: 95%;
   height: 2px;
   background-color: makerWheat;
   transform: translateY(0.5em);
