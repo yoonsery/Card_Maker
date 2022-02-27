@@ -4,7 +4,12 @@
 
 Users are able to
 
--
+- Log in using the Google & GitHub provider
+- Enter the personal information
+- Make and Delete a card with an add and delete buttonAdd
+- See the modified information at the preview when reflected at card maker realtime
+- Upload profile image using cloudinary
+- See the stored cards whenever they log in
 
 ## Skills
 
@@ -16,7 +21,7 @@ Users are able to
 
 ## Note ✍🏻
 
-### The more the array is, the slower it is when mapping
+### The more arrays there are, the slower they are when mapping
 
 상태를 업데이트할 때 주기적으로 발생하는 이벤트에 대해서 map, for loop을 사용하는 것은
 성능상 좋지 않다 (퍼포먼스상)
