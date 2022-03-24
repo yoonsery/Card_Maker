@@ -1,4 +1,6 @@
-# [Business Card Maker](https://sery-cardmaker.netlify.app/)
+# [Business Card Maker 👀](https://sery-cardmaker.netlify.app/)
+
+![demo_cardmaker](https://user-images.githubusercontent.com/69155242/159934907-16a37391-0c37-4215-9b58-01f4478c2de1.gif)
 
 ## Features
 
