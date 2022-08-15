@@ -7,8 +7,8 @@
 Users are able to
 
 - Log in using the Google & GitHub provider
-- Enter the personal information
-- Make and Delete a card with an add and delete buttonAdd
+- Enter the personal information on a card
+- Make and Delete a card with an add and delete button
 - See the modified information at the preview when reflected at card maker realtime
 - Upload profile image using cloudinary
 - See the stored cards whenever they log in
